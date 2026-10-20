@@ -25,3 +25,5 @@ options: |-
   Painting: Painting
   Photograph: Photograph
   VisualArtwork: 'Visual Artwork'
+  Subseries: Subseries
+  Season: Season
