@@ -63,9 +63,9 @@
         "drupal/config_update": "2.0.x-dev",
         "drupal/context": "^5.0@RC",
         "drupal/core": "~11.3.14",
-        "drupal/core-composer-scaffold": "~11.3.14",
-        "drupal/core-project-message": "~11.3.14",
-        "drupal/core-recommended": "~11.3.14",
+        "drupal/core-composer-scaffold": "11.3.19",
+        "drupal/core-project-message": "11.3.19",
+        "drupal/core-recommended": "11.3.19",
         "drupal/devel": "^5.1",
         "drupal/display_field_copy": "^2.0",
         "drupal/ds": "^3.30",
@@ -154,13 +154,14 @@
         "frictionlessdata/tableschema": "dev-ISSUE-78 as v1.2.3",
         "devizzent/cebe-php-openapi": "dev-master",
         "drupal/config_batch_export": "^2.0",
-        "drupal/ckeditor_lts": "^1.0"
+        "drupal/ckeditor_lts": "^1.0",
+        "drupal/externalauth": "^2.0.13"
     },
     "require-dev": {
         "mglaman/drupal-check": "^1.1",
         "rector/rector": "^1",
         "phpstan/phpstan": "^1",
-        "drupal/core-dev": "~11.3.14"
+        "drupal/core-dev": "11.3.19"
     },
     "conflict": {
         "drupal/drupal": "*"
