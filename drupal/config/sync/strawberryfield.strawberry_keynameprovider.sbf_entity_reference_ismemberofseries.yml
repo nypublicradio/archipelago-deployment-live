@@ -6,7 +6,7 @@ id: sbf_entity_reference_ismemberofseries
 label: 'NYPR Series'
 pluginid: entityjmespath
 pluginconfig:
-  source_key: ismemberofseries
+  source_key: ismemberofsubseries
   exposed_key: sbf_entity_reference_ismemberofseries
   entity_type: node
 active: true

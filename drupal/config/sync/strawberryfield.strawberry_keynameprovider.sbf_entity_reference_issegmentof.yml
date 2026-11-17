@@ -1,0 +1,12 @@
+uuid: 249bf022-8e99-41d8-b52b-aeb5580d1f8e
+langcode: en
+status: true
+dependencies: {  }
+id: sbf_entity_reference_issegmentof
+label: 'NYPR Segment'
+pluginid: entityjmespath
+pluginconfig:
+  source_key: issegmentof
+  exposed_key: sbf_entity_reference_issegmentof
+  entity_type: node
+active: true
