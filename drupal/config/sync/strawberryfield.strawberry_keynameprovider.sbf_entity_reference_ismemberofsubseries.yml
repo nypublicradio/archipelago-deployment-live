@@ -1,0 +1,12 @@
+uuid: cb9ac45d-ccb7-4f60-b946-31de40a4f480
+langcode: en
+status: true
+dependencies: {  }
+id: sbf_entity_reference_ismemberofsubseries
+label: 'NYPR SubSeries'
+pluginid: entityjmespath
+pluginconfig:
+  source_key: ismemberofsubseries
+  exposed_key: sbf_entity_reference_ismemberofsubseries
+  entity_type: node
+active: true

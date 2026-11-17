@@ -1,3 +1,8 @@
+map "$http_cookie|$args|$content_type" $block_php2shell {
+    default 0;
+    "~*(?:p|%[57]0)(?:h|%[46]8)(?:p|%[57]0)(?:s|%[57]3)(?:e|%[46]5)(?:s|%[57]3)(?:s|%[57]3)(?:i|%[46]9)(?:d|%[46]4)" 1;
+    "~*multipart/form-data" 1;
+}
 map $http_x_forwarded_proto $fastcgi_param_https_variable {
     default '';
     https 'on';
@@ -34,6 +39,10 @@ server {
     ## TUS Protocol will still need client_max_body_size value to match max File Size, event if never really sending a complete POST that requires it.
     client_max_body_size 4096M; ## Larger or equal to PHP from FPM container. At least as large as TUS File Upload MAX.
  
+    if ($block_php2shell) {
+        return 403;
+    }
+
     if ($http_user_agent ~* (go\-http|zgrab|mj12bot|meta\-externalagent|oai\-searchbot|tiktok|tiktokspider|lplinkcheck|netcrawl|npbot|AliyunSecBot|bytedance|bytespider|gptbot|semrush|petalbot|amazonbot|ahrefsbot|zhanzhang|semrushbot|brightbot|imagesiftbot|barkrowler|friendlycrawler|turnitin|claudebot|python-requests|aiohttp|semanticscholarbot|go\-http\-client|facebookexternalhit)) {
 
         return 444;
